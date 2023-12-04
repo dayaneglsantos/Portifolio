@@ -97,6 +97,7 @@ export const mapProjectsSection = (section = {}) => {
         project_description: description = '',
         repository_url: repository = '',
         site_url: site = '',
+        image_on_left: imgLeft = true,
         project_img: {
           data: {
             attributes: { url = '' }
@@ -108,6 +109,7 @@ export const mapProjectsSection = (section = {}) => {
         description,
         repository,
         site,
+        imgLeft,
         url
       }
     })

@@ -17,29 +17,15 @@ export const ProjectsContainer = styled.section`
     text-align: center;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
-    /* text-shadow: 2px 2px 2px #00272d; */
-    margin-top: 24px;
+    margin-top: 48px;
 
     @media (max-width: 768px) {
       font-size: 24px;
+      margin-top: 24px;
     }
   }
 
   ul {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px 32px;
-    padding: 34px 0 64px;
-
-    @media (min-width: 768px) and (max-width: 1200px) {
-      grid-template-columns: 1fr 1fr;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-      margin: 0 auto;
-    }
+    padding: 34px 0;
   }
 `

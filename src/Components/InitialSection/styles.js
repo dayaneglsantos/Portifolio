@@ -13,6 +13,7 @@ const bounce = keyframes`
 
 export const InitialSectionContainer = styled.section`
   background-color: #000706;
+  /* height: calc(100vh - 65px); */
 
   ${Container} {
     max-width: 1220px;

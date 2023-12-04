@@ -17,6 +17,7 @@ const Projects = ({ projects = [], title, id }) => {
               image={proj.url}
               repLink={proj.repository}
               siteLink={proj.site}
+              imgLeft={proj.imgLeft}
             />
           ))}
         </ul>

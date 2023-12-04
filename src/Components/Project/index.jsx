@@ -1,9 +1,17 @@
-import { ProjectContainer } from './styles'
+import { ProjectContainer, ProjectImage } from './styles'
+import P from 'prop-types'
 
-const Project = ({ name, description, image, repLink, siteLink }) => {
+const Project = ({
+  name,
+  description,
+  image,
+  repLink,
+  siteLink,
+  imgLeft = true
+}) => {
   return (
     <ProjectContainer>
-      <img src={image} alt={name} />
+      <ProjectImage src={image} alt={name} className={imgLeft ? 'left' : ''} />
       <div className="infos">
         <h3>{name}</h3>
         <p>{description}</p>
@@ -20,3 +28,7 @@ const Project = ({ name, description, image, repLink, siteLink }) => {
   )
 }
 export default Project
+
+Project.propTypes = {
+  imgLeft: P.bool.isRequired
+}

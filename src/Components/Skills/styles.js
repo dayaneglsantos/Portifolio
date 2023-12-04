@@ -8,6 +8,7 @@ export const SkillsContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 55%;
+    position: relative;
 
     h2 {
       color: #fff;
@@ -15,7 +16,11 @@ export const SkillsContainer = styled.div`
       text-align: center;
       text-transform: uppercase;
       font-family: 'Playfair Display', serif;
-      margin-top: 24px;
+      margin-top: 48px;
+
+      @media (max-width: 768px) {
+        margin-top: 24px;
+      }
     }
 
     .items {
@@ -25,6 +30,11 @@ export const SkillsContainer = styled.div`
       grid-template-columns: repeat(5, 1fr);
       gap: 32px;
       margin-top: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
 
       @media (max-width: 768px) {
         display: grid;
@@ -52,7 +62,7 @@ export const SkillsContainer = styled.div`
         }
 
         img {
-          height: 120px;
+          height: 80px;
           margin-bottom: 12px;
           transition: transform 0.3s ease-in-out;
 

@@ -5,12 +5,12 @@ export const AboutContainer = styled.section`
   background-color: #00272d;
 
   ${Container} {
+    position: relative;
     color: #fff;
-    min-height: 100vh;
-    height: auto;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    /* gap: 120px; */
 
     @media (max-width: 768px) {
       gap: 0;
@@ -21,44 +21,60 @@ export const AboutContainer = styled.section`
       align-items: center;
       gap: 64px;
       font-size: 14px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
 
       @media (max-width: 768px) {
-        display: block;
         width: 80%;
         padding: 32px 0;
         font-size: 12px;
         text-align: justify;
       }
+
+      @media (max-width: 375px) {
+        display: block;
+      }
+
+      @media (max-width: 375px) {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
     }
-  }
 
-  h2 {
-    color: #fff;
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    margin-top: 24px;
+    h2 {
+      color: #fff;
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
+      margin-top: 48px;
 
-    @media (max-width: 768px) {
-      font-size: 24px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        margin-top: 24px;
+      }
     }
-  }
 
-  .location {
-    margin-top: 32px;
-    display: block;
-  }
+    .location {
+      margin-top: 32px;
+      display: block;
+    }
 
-  .profilePicture {
-    height: 220px;
-    border-radius: 50%;
-    display: block;
+    .profilePicture {
+      height: 220px;
+      border-radius: 50%;
+      display: block;
 
-    @media (max-width: 768px) {
-      height: 160px;
-      margin: 0 auto;
-      margin-bottom: 24px;
+      @media (max-width: 768px) {
+        height: 160px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+      }
     }
   }
 `

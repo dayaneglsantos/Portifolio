@@ -9,11 +9,11 @@ export const ProjectContainer = styled.li`
   transition: transform 0.4s ease-in-out;
   transform: scale(1);
   display: flex;
-  flex-direction: column;
   width: 100%;
+  margin-bottom: 42px;
 
-  @media (max-width: 768px) {
-    margin: 0 auto;
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 
   &:hover {
@@ -21,19 +21,13 @@ export const ProjectContainer = styled.li`
     border: 2px solid #2b2019;
   }
 
-  img {
-    display: block;
-    margin-bottom: 24px;
-    border-radius: 8px;
-  }
-
   .infos {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     align-items: center;
-    height: 100%;
+    padding: 0 24px;
+    /* height: 100%; */
 
     h3 {
       color: #2b2019;
@@ -44,6 +38,7 @@ export const ProjectContainer = styled.li`
       margin: 12px 0;
       font-size: 12px;
       color: #000706;
+      text-align: justify;
     }
 
     a {
@@ -55,8 +50,18 @@ export const ProjectContainer = styled.li`
       font-size: 14px;
 
       &:hover {
-        text-decoration: underline;
+        color: #0c7e7e;
       }
     }
+  }
+`
+export const ProjectImage = styled.img`
+  height: 100%;
+  border-radius: 8px;
+  order: ${(props) => (props.className === 'left' ? 0 : 1)};
+
+  @media (max-width: 767px) {
+    order: 0;
+    margin-bottom: 24px;
   }
 `
