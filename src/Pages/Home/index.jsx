@@ -20,7 +20,7 @@ const Home = () => {
     const getData = async () => {
       try {
         const json = await fetch(
-          'https://portifolio-ch2s.onrender.com/api/portifolios/?populate=deep&pagination[pageSize]=1&sort[0]=id:desc'
+          'https://portifolio-backend-84e824094ad3.herokuapp.com/api/portifolios/?populate=deep&pagination[pageSize]=1&sort[0]=id:desc'
         ).then((res) => res.json())
 
         const { attributes } = json.data[0]
