@@ -34,15 +34,8 @@ export const AboutContainer = styled.section`
         text-align: justify;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 767px) {
         display: block;
-      }
-
-      @media (max-width: 375px) {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
       }
     }
 
