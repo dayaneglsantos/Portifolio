@@ -10,7 +10,6 @@ const About = ({ title, id, text, location, url }) => {
           <img src={url} alt="Foto do perfil" className="profilePicture" />
           <div>
             <p>{text}</p>
-
             <span className="location"> {location}</span>
           </div>
         </div>

@@ -7,10 +7,8 @@ export const AboutContainer = styled.section`
   ${Container} {
     position: relative;
     color: #fff;
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    /* gap: 120px; */
 
     @media (max-width: 768px) {
       gap: 0;
@@ -36,6 +34,7 @@ export const AboutContainer = styled.section`
 
       @media (max-width: 767px) {
         display: block;
+        margin-top: 24px;
       }
     }
 
@@ -65,8 +64,7 @@ export const AboutContainer = styled.section`
 
       @media (max-width: 768px) {
         height: 160px;
-        margin: 0 auto;
-        margin-bottom: 24px;
+        margin: 24px auto;
       }
     }
   }
